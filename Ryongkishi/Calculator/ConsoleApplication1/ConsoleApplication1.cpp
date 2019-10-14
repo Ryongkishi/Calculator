@@ -113,7 +113,8 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		Calculator* calc = new Calculator();
-		string question = calc->MakeFormula();
+		string question;// = calc->MakeFormula();
+		cin >> question;
 		cout << question << endl;
 		string ret = calc->Solve(question);
 		cout << ret << endl;
