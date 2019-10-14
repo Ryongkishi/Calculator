@@ -46,7 +46,7 @@ string Calculator::Solve(string formula) {
 			else {
 
 				if (k < j) {
-					tempStack->push_back(formula.substr(k, j+1));//111
+					tempStack->push_back(formula.substr(k, j+1-k));//111
 				}
 				if (operatorStack->empty()) {
 					operatorStack->push(formulaChar);
@@ -55,7 +55,7 @@ string Calculator::Solve(string formula) {
 					char stackChar = operatorStack->top();
 					if ((stackChar == '+' || stackChar == '-')
 						&& (formulaChar == '*' || formulaChar == '/')) {
-						operatorStack->push(formulaChar);
+						operatorStack->push(stackChar);
 					}
 					else {
 						tempStack->push_back(to_string(operatorStack->top()));
@@ -108,11 +108,17 @@ string Calculator::Solve(string formula) {
 
 int main()
 {
-	Calculator* calc = new Calculator();
-	string question = calc->MakeFormula();
-	cout << question << endl;
-	string ret = calc->Solve("11+22");
-	cout << ret << endl;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		Calculator* calc = new Calculator();
+		string question = calc->MakeFormula();
+		cout << question << endl;
+		string ret = calc->Solve(question);
+		cout << ret << endl;
+	}
+
 	getchar();
 }
 
