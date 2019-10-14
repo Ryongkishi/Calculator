@@ -1,0 +1,4 @@
+﻿  ConsoleApplication1.cpp
+c:\study\软工\calculator\ryongkishi\calculator\consoleapplication1\consoleapplication1.cpp(75): warning C4018: “<”: 有符号/无符号不匹配
+  ConsoleApplication1.vcxproj -> C:\Study\软工\Calculator\Ryongkishi\Calculator\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> C:\Study\软工\Calculator\Ryongkishi\Calculator\Debug\ConsoleApplication1.pdb (Full PDB)
